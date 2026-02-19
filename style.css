@@ -1,4 +1,4 @@
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,28 +8,36 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #9764e9;
+    background-color: #f8f9fc;          /* fundo neutro e limpo */
 }
 
+/* Links gerais */
 a {
-    color: inherit;
+    color: #6b46c1;                     /* roxo suave como cor principal */
     text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #9f7aea;
+    text-decoration: underline;
 }
 
+/* Container principal */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-    background: #e76b6b;
-    padding: 20px 0;
-    border-bottom: 1px solid #18eea6;
+    background: #ffffff;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
 .header-content {
@@ -39,147 +47,169 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    color: #6b46c1;
 }
 
 .tiktok-btn {
     background: #000;
-    color: rgb(238, 233, 233);
-    padding: 10px 20px;
+    color: white;
+    padding: 10px 22px;
     border-radius: 50px;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    font-size: 0.95rem;
+    transition: all 0.3s;
 }
 
 .tiktok-btn:hover {
     background: #ff0050;
+    transform: translateY(-2px);
 }
 
 /* ===== HERO ===== */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: #11e67b;
+    padding: 120px 20px 100px;
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); /* degradê suave roxo */
 }
 
 .hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color: #2d3748;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 750px;
+    font-size: 1.25rem;
+    max-width: 720px;
     margin: 0 auto;
-    color: #555;
+    color: #4a5568;
 }
 
-/* ===== SEÇÕES ===== */
+/* ===== SEÇÕES GERAIS ===== */
 section {
-    padding: 80px 20px;
-    background: #13e48d;
-    margin: 20px 0;
+    padding: 90px 20px;
+}
+
+/* Sobrescreve apenas as seções que precisam de fundo diferente */
+.sobre,
+.projetos,
+.contato {
+    background: #ffffff;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    max-width: 1100px;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.2rem;
-    color: #222;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    color: #2d3748;
+    position: relative;
 }
 
-/* ===== SOBRE MIM ===== */
-.sobre {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.1rem;
+h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #6b46c1;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
 /* ===== PROJETOS ===== */
 .projetos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .projeto-card {
-    background: #f9f9f9;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
 .projeto-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .projeto-img {
-    height: 180px;
-    background: #ddd center/cover no-repeat;
+    height: 200px;
+    background: #e2e8f0 center/cover no-repeat;
 }
 
 .projeto-conteudo {
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 .projeto-conteudo h3 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    color: #2d3748;
 }
 
 .projeto-conteudo p {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
+    color: #718096;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.projeto-conteudo a {
+    color: #6b46c1;
+    font-weight: bold;
 }
 
 /* ===== CONTATO ===== */
 .contato {
-    background: #f4f4f4;
     text-align: center;
 }
 
 .contato-links {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 2.5rem;
 }
 
 .contato-links a {
-    padding: 12px 30px;
+    padding: 14px 32px;
     border-radius: 50px;
     color: white;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-.email { background: #666; }
+.email    { background: #718096; }
 .whatsapp { background: #25D366; }
-.tiktok { background: #ff0050; }
+.tiktok   { background: #ff0050; }
 
 .contato-links a:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
+    transform: scale(1.08);
+    opacity: 0.92;
 }
 
 /* ===== RODAPÉ ===== */
 footer {
     text-align: center;
-    padding: 40px 20px;
-    background: #222;
-    color: #aaa;
-    font-size: 0.9rem;
+    padding: 3rem 20px;
+    background: #2d3748;
+    color: #a0aec0;
+    font-size: 0.95rem;
 }
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.3rem; }
-    .header-content { flex-direction: column; gap: 15px; }
-    .contato-links { flex-direction: column; align-items: center; }
-    .contato-links a { width: 200px; }
+    .hero          { padding: 80px 20px 60px; }
+    .hero h1       { font-size: 2.4rem; }
+    .header-content{ flex-direction: column; gap: 1rem; }
+    .contato-links { flex-direction: column; gap: 1rem; }
+    .contato-links a { width: 220px; }
 }
