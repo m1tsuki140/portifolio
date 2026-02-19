@@ -8,17 +8,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fc;          /* fundo neutro e limpo */
+    background-color: #f0fdfa;          /* Verde água claro, dá vida sem ser branco puro */
 }
 
 /* Links gerais */
 a {
-    color: #6b46c1;                     /* roxo suave como cor principal */
+    color: #0d9488;                     /* Verde teal principal */
     text-decoration: none;
     transition: color 0.2s;
 }
 a:hover {
-    color: #9f7aea;
+    color: #14b8a6;
     text-decoration: underline;
 }
 
@@ -49,11 +49,11 @@ header {
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #6b46c1;
+    color: #0d9488;
 }
 
 .tiktok-btn {
-    background: #000;
+    background: #0d9488;                /* Verde no botão TikTok */
     color: white;
     padding: 10px 22px;
     border-radius: 50px;
@@ -62,7 +62,7 @@ header {
 }
 
 .tiktok-btn:hover {
-    background: #ff0050;
+    background: #0f766e;
     transform: translateY(-2px);
 }
 
@@ -70,20 +70,21 @@ header {
 .hero {
     text-align: center;
     padding: 120px 20px 100px;
-    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); /* degradê suave roxo */
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); /* Degradê verde claro suave */
+    border-bottom: 8px solid #14b8a6;   /* Linha verde embaixo */
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1.2rem;
-    color: #2d3748;
+    color: #065f46;                     /* Verde escuro pro título */
 }
 
 .hero p {
     font-size: 1.25rem;
     max-width: 720px;
     margin: 0 auto;
-    color: #4a5568;
+    color: #374151;
 }
 
 /* ===== SEÇÕES GERAIS ===== */
@@ -91,22 +92,24 @@ section {
     padding: 90px 20px;
 }
 
-/* Sobrescreve apenas as seções que precisam de fundo diferente */
+/* Seções com fundo branco + toque verde */
 .sobre,
 .projetos,
 .contato {
     background: #ffffff;
-    margin: 30px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(20, 184, 166, 0.12); /* Sombra com verde */
+    border: 1px solid #d1fae5;         /* Borda verde clara */
     max-width: 1100px;
+    padding: 60px 30px;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.4rem;
-    color: #2d3748;
+    color: #065f46;
     position: relative;
 }
 
@@ -114,7 +117,7 @@ h2::after {
     content: '';
     width: 60px;
     height: 4px;
-    background: #6b46c1;
+    background: #14b8a6;
     display: block;
     margin: 12px auto 0;
     border-radius: 2px;
@@ -128,7 +131,8 @@ h2::after {
 }
 
 .projeto-card {
-    background: #ffffff;
+    background: #f8fffd;                /* Fundo quase branco com toque verde */
+    border: 1px solid #d1fae5;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -137,12 +141,13 @@ h2::after {
 
 .projeto-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 40px rgba(20, 184, 166, 0.25); /* Sombra verde no hover */
+    border-color: #6ee7b7;
 }
 
 .projeto-img {
     height: 200px;
-    background: #e2e8f0 center/cover no-repeat;
+    background: #e6fffa center/cover no-repeat;
 }
 
 .projeto-conteudo {
@@ -152,17 +157,17 @@ h2::after {
 .projeto-conteudo h3 {
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
-    color: #2d3748;
+    color: #065f46;
 }
 
 .projeto-conteudo p {
-    color: #718096;
+    color: #4b5563;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 
 .projeto-conteudo a {
-    color: #6b46c1;
+    color: #0d9488;
     font-weight: bold;
 }
 
@@ -187,9 +192,9 @@ h2::after {
     transition: all 0.3s;
 }
 
-.email    { background: #718096; }
+.email    { background: #6b7280; }
 .whatsapp { background: #25D366; }
-.tiktok   { background: #ff0050; }
+.tiktok   { background: #0d9488; }     /* Verde pro TikTok */
 
 .contato-links a:hover {
     transform: scale(1.08);
@@ -200,8 +205,8 @@ h2::after {
 footer {
     text-align: center;
     padding: 3rem 20px;
-    background: #2d3748;
-    color: #a0aec0;
+    background: #065f46;                /* Verde escuro no rodapé */
+    color: #d1fae5;
     font-size: 0.95rem;
 }
 
